@@ -1,0 +1,22 @@
+for (t = 0; t < 5; t++) {
+          let house = document.createElement('div');
+          house.setAttribute('class', 'house');
+          house.t = ((t + 1) * 350) * -1;
+          house.style.top = (t * 150) + "px";
+          house.style.backgroundImage = houseModelling();
+          house.style.left = Math.floor(Math.random() * 350) + "px";
+          carGame.appendChild(house);
+        }
+
+
+ }
+      function houseModelling() {
+          const house_models = [
+            'url("/images/house0.png")',
+            'url("/images/house1.png")',
+          ];
+          const hod = document.querySelector('.house');
+          const hbg = house_models[Math.floor(Math.random() * house_models.length)];
+          return hbg;
+
+        }
